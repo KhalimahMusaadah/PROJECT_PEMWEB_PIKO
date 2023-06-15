@@ -260,24 +260,4 @@ class Admin_system extends PX_Controller {
 		$this->load->view('backend/index',$data);
 	}
 
-	// function form_laporan_bulanan(){
-	// 	$this->check_login_petugas();
-	// 	$data['userdata'] = $this->session_petugas;
-	// 	$data['data'] = $this->model_basic->select_all_join_2('tbl_riwayat','tbl_riwayat.*,tbl_komik.name as name_komik,tbl_peminjam.name as name_peminjam','tbl_komik','tbl_riwayat.id_komik','tbl_komik.id_komik','tbl_peminjam','tbl_riwayat.id_peminjam','tbl_peminjam.id_peminjam');
-	// 	$data['content'] = $this->load->view('backend/admin_system/form_laporan_bulanan',$data,true);
-	// 	$this->load->view('backend/index',$data);
-	// }
-	//
-	// function laporan_bulanan(){
-	// 	$this->check_login_petugas();
-	// 	$data['userdata'] = $this->session_petugas;
-	// 	$bulan = $this->input->post('bulan');
-	// 	$tahun = $this->input->post('tahun');
-	//
-	// 	$data['data'] = $this->model_basic->select_all_join_2('tbl_riwayat','tbl_riwayat.*,tbl_komik.name as name_komik,tbl_peminjam.name as name_peminjam','tbl_komik','tbl_riwayat.id_komik','tbl_komik.id_komik','tbl_peminjam','tbl_riwayat.id_peminjam','tbl_peminjam.id_peminjam');
-	// 	$data['content'] = $this->load->view('backend/admin_system/laporan_bulanan',$data,true);
-	// 	$this->load->view('backend/index',$data);
-	// }
-
-
 }
