@@ -252,12 +252,5 @@ class Admin_system extends PX_Controller {
 		redirect('admin_system/riwayat');
 	}
 
-	function laporan_pinjam(){
-		$this->check_login_petugas();
-		$data['userdata'] = $this->session_petugas;
-		$data['data'] = $this->model_basic->select_where_join_2('tbl_pinjam','tbl_pinjam.*,tbl_komik.name as name_komik,tbl_peminjam.name as name_peminjam','tbl_pinjam.status','1','tbl_komik','tbl_pinjam.id_komik','tbl_komik.id_komik','tbl_peminjam','tbl_pinjam.id_peminjam','tbl_peminjam.id_peminjam')->result();
-		$data['content'] = $this->load->view('backend/admin_system/laporan_pinjam',$data,true);
-		$this->load->view('backend/index',$data);
-	}
 
 }
